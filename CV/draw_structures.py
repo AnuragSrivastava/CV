@@ -30,6 +30,9 @@ def draw_figures(event, x, y, flags, param):
 
 cv2.setMouseCallback('figures', draw_figures)
 
+# to draw an unfilled rectangle a
+cv2.rectangle(image, (10,10), (50,50), (255, 255, 255), 3)
+
 while 1:
     cv2.imshow('figures',image)
     k = cv2.waitKey(1) & 0xFF
