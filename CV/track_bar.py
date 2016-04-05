@@ -7,7 +7,7 @@ def nothing(x):
 
 
 img = np.zeros((512, 512, 3))
-
+'''
 # create a window to which the trackbars would be attached
 cv2.namedWindow('TrackBar')
 
@@ -38,13 +38,13 @@ while (1):
         img[:] = [b, g, r]
 
 cv2.destroyAllWindows()
-
+'''
 # Simple Paint Application using trackbars
 
 
-mode = 'Circle'
+mode = ''
 ix, iy = -1, -1
-b, g, r, s = 0, 0, 0, 0
+# b, g, r, s = 0, 0, 0, 0
 
 
 def draw_shape(event, x, y, flags, param):
@@ -55,17 +55,18 @@ def draw_shape(event, x, y, flags, param):
 
     elif event == cv2.EVENT_LBUTTONUP:
         if mode == 'Rectangle':
-            cv2.rectangle(img, (ix, iy), (x, y), (b, g, r), 2)
+            cv2.rectangle(img, (ix, iy), (x, y), (b, g, r), -1)
+            print cv2.getTrackbarPos('B', 'Paint')
         elif mode == 'Circle':
             xc = abs(ix+x)/2
             yc = abs(iy+y)/2
             radius = abs(x-xc)
-            cv2.circle(img, (xc, yc), radius, (b, g, r), 2)
+            cv2.circle(img, (xc, yc), radius, (b, g, r), -1)
 
 cv2.namedWindow('Paint')
 
 cv2.setMouseCallback('Paint', draw_shape)
-paint = np.zeros((800, 1024, 3))
+paint = np.ones((800, 1024, 3))
 
 
 cv2.createTrackbar('R', 'Paint', 0, 255, nothing)
@@ -76,7 +77,7 @@ cv2.createTrackbar(shape, 'Paint', 0, 1, nothing)
 
 while True:
     cv2.imshow('Paint', paint)
-    k = cv2.waitKey(1)
+    k = cv2.waitKey(1) & 0xFF
 
     if k == 27:
         break
@@ -84,7 +85,7 @@ while True:
     r = cv2.getTrackbarPos('R', 'Paint')
     g = cv2.getTrackbarPos('G', 'Paint')
     b = cv2.getTrackbarPos('B', 'Paint')
-    s = cv2.getTrackbarPos('Shape', 'Paint')
+    s = cv2.getTrackbarPos(shape, 'Paint')
 
     if s == 0:
         mode = 'Circle'
