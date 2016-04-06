@@ -4,7 +4,6 @@
     <list default="true" id="be8bd86a-64a5-4d3a-b483-e1614252b126" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CV/core_functions.py" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CV/threshold.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="untitled.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,8 +27,8 @@
       <file leaf-file-name="threshold.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CV/threshold.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16574585">
-              <caret line="5" column="99" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
+            <state vertical-scroll-proportion="0.53038675">
+              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -464,8 +463,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CV/threshold.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16574585">
-          <caret line="5" column="99" selection-start-line="5" selection-start-column="99" selection-end-line="5" selection-end-column="99" />
+        <state vertical-scroll-proportion="0.53038675">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
